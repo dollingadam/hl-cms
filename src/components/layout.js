@@ -1,15 +1,24 @@
-import * as React from "react"
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/style.css';
-import {Link} from "gatsby";
+import { Link } from "gatsby";
+import Header from './header';
+import { Helmet } from 'react-helmet';
 
 const Layout = ({ children }) => (
-    <>
-      <header><Link to="/">Gatsby ITHS-starter</Link></header>
-      <main>{children}</main>
-      <footer>Footer</footer>
-    </>
-  )
+
+  <>
+    <Helmet>
+      <meta name="author" />
+    </Helmet>
+    <header><Link to="/">Gatsby ITHS-starter</Link></header>
+    <Header />
+    <main className="min-wh-100">{children}</main>
+
+    <footer>Footer</footer>
+
+  </>
+)
 
 
 export default Layout
