@@ -27,6 +27,7 @@ const PostTemplate = (props) => {
       <GatsbyImage image={props.data.contentfulPosts.heroImage.gatsbyImage} />
       <p>{props.data.contentfulPosts.description}</p>
     </Layout>
+
   );
 };
 
