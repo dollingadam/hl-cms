@@ -14,12 +14,12 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     `);
 
-  response.data.allContentfulPosts.edges.forEach(({ edge }) => {
+  response.data.allContentfulPosts.edges.forEach(({ node }) => {
     createPage({
-      path: `/portfolio/${edge.node.slug}`,
+      path: `/portfolio/${node.slug}`,
       component: path.resolve('./src/templates/post.js'),
       context: {
-        slug: edge.node.slug,
+        slug: node.slug,
       },
     });
   });
