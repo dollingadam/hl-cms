@@ -1,4 +1,4 @@
-import React from "react"
+/* import React from "react"
 import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
@@ -53,3 +53,4 @@ const SecondPage = () => {
 export const Head = () => <title>Portfolio Page</title>
 
 export default SecondPage
+ */
