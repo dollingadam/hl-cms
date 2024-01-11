@@ -11,7 +11,7 @@ const Layout = ({ children }) => (
     <Helmet>
       <meta name="author" />
     </Helmet>
-    <header><Link to="/">Gatsby ITHS-starter</Link></header>
+    <header><Link to="/"></Link></header>
     <Header />
     <main className="min-wh-100">{children}</main>
 

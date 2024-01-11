@@ -20,12 +20,12 @@ export const query = graphql`
 `;
 
 const PostTemplate = (props) => {
-
+  const { img, description, title } = props.data.contentfulPosts
   return (
     <Layout>
-      <h1>{props.data.contentfulPosts.title}</h1>
-      <GatsbyImage image={props.data.contentfulPosts.heroImage.gatsbyImage} />
-      <p>{props.data.contentfulPosts.description}</p>
+      <h1>{title}</h1>
+      {/*  <GatsbyImage image={props.heroImage.gatsbyImage} /> */}
+      <p>{description}</p>
     </Layout>
 
   );
