@@ -1,17 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
-const HomeTemplate = ({ contentfulPage }) => {
-    console.log("contentfulPage in HomeTemplate:", contentfulPage);
-
-    if (contentfulPage && contentfulPage.title) {
-        return (
+const HomeTemplate = (contentfulPage) => {
+    return (
+        <>
             <main>
                 <h2>{contentfulPage.title}</h2>
+                <p>{contentfulPage.content.content}</p>
+                <GatsbyImage image={contentfulPage.image.gatsbyImageData} />
             </main>
-        );
-    } else {
-        return null; // or render a default component/message if title is not available
-    }
+        </>
+    );
 }
 
-export default HomeTemplate
+export default HomeTemplate;

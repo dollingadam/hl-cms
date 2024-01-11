@@ -36,7 +36,7 @@ const Page = (props) => {
         }
     }
 
-    return <Layout>{getTemplate(contentfulPage)}</Layout>
+    return (<Layout>{getTemplate(contentfulPage)}</Layout>)
 }
 
 export const query = graphql`
@@ -44,7 +44,12 @@ export const query = graphql`
     contentfulPage(id: { eq: $id }) {
       url
       title
-
+      content {
+        content
+      }
+      image {
+        gatsbyImageData(width: 200)
+      }
       template
 
     }
