@@ -15,7 +15,7 @@ const Layout = ({ children }) => (
     <Header />
     <main className="min-wh-100">{children}</main>
 
-    <footer>Footer</footer>
+    <footer>ADDO 2024&copy;</footer>
 
   </>
 )

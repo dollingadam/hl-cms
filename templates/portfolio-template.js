@@ -173,9 +173,9 @@ const SecondPage = () => {
     <ul>
       {portData.map(({ node }, index) => (
         <li key={index}>
-          <h2> <Link to={node.url}>{node.title}</Link></h2>
+          <h2> <Link to={`/portfolio/${node.slug}`}>{node.title}</Link></h2>
           <p>{node.description.description}</p>
-          <GatsbyImage image={node.heroImage.gatsbyImageData} />
+          <GatsbyImage className="items" image={node.heroImage.gatsbyImageData} />
 
         </li>
       ))}

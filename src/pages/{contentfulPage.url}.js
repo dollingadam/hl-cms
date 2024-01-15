@@ -9,34 +9,33 @@ import SecondPage from "../../templates/portfolio-template"
 import ContactTemplate from "../../templates/contact-template"
 
 const Page = (props) => {
-    const { data } = props
-    console.log("data:", data);
-    const { contentfulPage } = data
+  const { data } = props
+  console.log("data:", data);
+  const { contentfulPage } = data
 
 
 
-    // Log contentfulPage object
-    console.log("contentfulPage:", contentfulPage)
+  // Log contentfulPage object
+  console.log("contentfulPage:", contentfulPage)
 
-    const getTemplate = (contentfulPage) => {
-        // Log template type
-        console.log("Template Type:", contentfulPage.template)
+  const getTemplate = (contentfulPage) => {
+    // Log template type
+    console.log("Template Type:", contentfulPage.template)
 
-        switch (contentfulPage.template.toLowerCase()) {
-            case "about-template":
-                return <AboutTemplate {...contentfulPage} />
-            case "contact-template":
-                return <ContactTemplate {...contentfulPage} />
-            case "portfolio-template":
-                return <SecondPage {...contentfulPage} />
-            case "post-template":
-                return <PostTemplate {...contentfulPage} />
-            default:
-                return <HomeTemplate {...contentfulPage} />
-        }
+    switch (contentfulPage.template.toLowerCase()) {
+      case "about-template":
+        return <AboutTemplate {...contentfulPage} />
+      case "contact-template":
+        return <ContactTemplate {...contentfulPage} />
+      case "portfolio-template":
+        return <SecondPage {...contentfulPage} />
+
+      default:
+        return <HomeTemplate {...contentfulPage} />
     }
+  }
 
-    return (<Layout>{getTemplate(contentfulPage)}</Layout>)
+  return (<Layout>{getTemplate(contentfulPage)}</Layout>)
 }
 
 export const query = graphql`
