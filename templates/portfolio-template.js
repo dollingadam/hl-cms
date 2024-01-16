@@ -170,17 +170,20 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 const SecondPage = () => {
   const portData = UsePort();
   return (
-    <ul>
+    <ul style={{ listStyle: 'none', padding: 0 }}>
       {portData.map(({ node }, index) => (
         <li key={index}>
-          <h2> <Link to={`/portfolio/${node.slug}`}>{node.title}</Link></h2>
+          <h2>
+            <Link to={`/portfolio/${node.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+              {node.title}
+            </Link>
+          </h2>
           <p>{node.description.description}</p>
           <GatsbyImage className="items" image={node.heroImage.gatsbyImageData} />
-
         </li>
       ))}
     </ul>
   )
 }
 
-export default SecondPage
+export default SecondPage;
