@@ -13,7 +13,12 @@ export const query = graphql`
         description
       }
       heroImage {
-        gatsbyImage(width: 200)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 500
+          height: 300
+          placeholder: BLURRED
+        )
       }
     }
   }
@@ -28,7 +33,7 @@ const PostTemplate = (props) => {
       <p>{description.description}</p>
 
       <GatsbyImage
-        image={getImage(heroImage.gatsbyImage)}
+        image={getImage(heroImage.gatsbyImageData)}
         alt={title}
 
       />

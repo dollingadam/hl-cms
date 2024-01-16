@@ -38,3 +38,13 @@ footer {
     color: white;
     padding: 1rem;
 }
+
+.line {
+    width: 100%;
+    background-color: black;
+    height: 2px;
+}
+
+.item1 {
+    padding-top: 1rem;
+}

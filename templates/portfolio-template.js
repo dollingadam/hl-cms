@@ -172,7 +172,7 @@ const SecondPage = () => {
   return (
     <ul style={{ listStyle: 'none', padding: 0 }}>
       {portData.map(({ node }, index) => (
-        <li key={index}>
+        <li key={index} className="item1">
           <h2>
             <Link to={`/portfolio/${node.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
               {node.title}
@@ -180,6 +180,8 @@ const SecondPage = () => {
           </h2>
           <p>{node.description.description}</p>
           <GatsbyImage className="items" image={node.heroImage.gatsbyImageData} />
+          <div className="line"></div>
+
         </li>
       ))}
     </ul>

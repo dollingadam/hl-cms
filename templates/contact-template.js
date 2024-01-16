@@ -10,7 +10,10 @@ const ContactTemplate = () => {
         <ul>
             {LinksData.map(({ node }, index) => (
                 <li key={index}>
-                    <Link to={node.url}>{node.name}</Link>
+                    <Link to={node.url}>
+                    </Link>
+                    <GatsbyImage image={node.image.GatsbyImageData} alt={node.name} />
+
                 </li>
             ))}
         </ul>

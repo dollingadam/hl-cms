@@ -8,6 +8,13 @@ const UseLinks = () => {
       node {
         url
         name
+        image {
+            gatsbyImageData(
+
+              width: 500
+
+            )
+          }
       }
     }
     }
