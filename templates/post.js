@@ -1,4 +1,4 @@
-
+/*
 import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../src/components/layout";
@@ -25,11 +25,12 @@ const PostTemplate = (props) => {
   return (
     <Layout>
       <h1>{title}</h1>
-      {/*      {<GatsbyImage image={heroImage.gatsbyImage} />}
-      <p>{description.description}</p> */}
+      {<GatsbyImage image={heroImage.gatsbyImage} />}
+      <p>{description.description}</p>
     </Layout>
   );
 };
 
 
 export default PostTemplate;
+ */
