@@ -8,16 +8,18 @@ const UseLinks = () => {
       node {
         url
         name
+
         image {
             gatsbyImageData(
 
-              width: 500
+              width: 100
 
             )
           }
       }
     }
     }
+
   }
 `)
     return data.allContentfulLinks.edges;

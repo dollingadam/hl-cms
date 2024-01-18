@@ -9,7 +9,7 @@ const Layout = ({ children }) => (
 
   <>
     <Helmet>
-      <meta name="author" />
+      <meta name="author" content="Adam Dolling" />
     </Helmet>
     <header><Link to="/"></Link></header>
     <Header />
